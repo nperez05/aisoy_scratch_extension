@@ -1318,7 +1318,7 @@ new (function() {
 
 		if(robot!=null){
 			var req = new ROSLIB.ServiceRequest({
-				filter : "*"
+				data : "*"
 			});
 
 			robot.getAudioListService.callService(req, function( result1 ){
