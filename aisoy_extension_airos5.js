@@ -311,8 +311,8 @@ new (function() {
 		
 		this.touch = new ROSLIB.Topic({
 			ros : bot.ros,
-			name : '/airos4/touch/touch',
-			messageType : 'airos4_msgs/Touch'
+			name : '/airos5/touch/data',
+			messageType : 'airos_msgs/Touch'
 		});
 		
 		this.asr = new ROSLIB.Topic({
@@ -1013,8 +1013,8 @@ new (function() {
 					robot.listeners.update("touch", message.left + "#" + message.head + "#" + message.right);
 					var where = 0
 
-					if(message.left) robot.touchedLeft=true;
-					if(message.right) robot.touchedRight=true;
+					if(message.back_left) robot.touchedLeft=true;
+					if(message.back_right) robot.touchedRight=true;
 					if(message.head) robot.touchedHead=true;
 				}
 			}).bind(this));
