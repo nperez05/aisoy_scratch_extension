@@ -791,9 +791,9 @@ new (function() {
 	
 	ext.moveHeadH = function(bot,position,time,block,callback){
 		if(block == 'block')
-			moveServo(bot,position,time,0,callback);
+			moveServo(bot,position,time,'head',callback);
 		else{
-			moveServo(bot,position,time,0,null);
+			moveServo(bot,position,time,'head',null);
 			callback();
 		}
 	}
