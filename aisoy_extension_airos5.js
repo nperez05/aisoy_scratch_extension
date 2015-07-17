@@ -776,7 +776,7 @@ new (function() {
 				position : parseFloat(position),
 				servo: servo,
 				time : timeAux,
-				type : typeAux,
+				type : typeAux.toString(),
 				async : waitAux
 			});
 			
