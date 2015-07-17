@@ -791,40 +791,40 @@ new (function() {
 		}*/
 	}
 	
-	ext.moveHeadH = function(bot,position,time,block,callback){
-		if(block == 'block')
+	ext.moveHeadH = function(bot,position,time,callback){
+		//if(block == 'block')
 			moveServo(bot,position,time,'head',callback);
-		else{
+		/*else{
 			moveServo(bot,position,time,'head',null);
 			callback();
-		}
+		}*/
 	}
 	
-	ext.moveHeadV = function(bot,position,time,block,callback){
-		if(block == 'block')
+	ext.moveHeadV = function(bot,position,time,callback){
+		//if(block == 'block')
 			moveServo(bot,position,time,1,callback);
-		else{
+		/*else{
 			moveServo(bot,position,time,1,null);
 			callback();
-		}
+		}*/
 	}
 	
-	ext.moveEyebrows = function(bot,position,time,block,callback){
-		if(block == 'block')
-			moveServo(bot,position,time,2,callback);
-		else{
-			moveServo(bot,position,time,2,null);
+	ext.moveEyebrows = function(bot,position,time,callback){
+		//if(block == 'block')
+			moveServo(bot,position,time,'eyebrows',callback);
+		/*else{
+			moveServo(bot,position,time,'eyebrows',null);
 			callback();
-		}
+		}*/
 	}
 	
-	ext.moveEyes = function(bot,position,time,block,callback){
-		if(block == 'block')
-			moveServo(bot,position,time,1,callback);
-		else{
-			moveServo(bot,position,time,1,null);
+	ext.moveEyes = function(bot,position,time,callback){
+		//if(block == 'block')
+			moveServo(bot,position,time,'eyelids',callback);
+		/*else{
+			moveServo(bot,position,time,'eyelids',null);
 			callback();
-		}
+		}*/
 	}
 	
 	function moveBot(bot,time,direction,veloc,block,callback){
@@ -1483,12 +1483,12 @@ new (function() {
 			//['w', '%s say %s moving mouth %m.blocking', 'sayWith', 'bot1', 'text to say', 'block'],
 			['w', '[A] %s says one of the %s %m.saying moving mouth %m.blocking', 'sayList', 'bot1', 'list','with','block'],
 			//['w', 'move head horizontal of %s to %n in %n seconds %m.blocking', 'moveHeadH', 'bot1',0.5, 1, 'no block'],
-			['w', '[A] %s moves head horizontal to %n %m.velocity %m.blocking', 'moveHeadH', 'bot1',0.5, 'medium', 'no block'],
+			['w', '[A] %s moves head horizontal to %n %m.velocity', 'moveHeadH', 'bot1',0.5, 'medium'],
 			//['w', 'move head vertical of %s to %n in %n seconds %m.blocking', 'moveHeadV', 'bot1',0.5, 1, 'no block'],
 			//['w', 'move eyebrows of %s to %n in %n seconds %m.blocking', 'moveEyebrows', 'bot1',0.5, 1, 'no block'],
-			['w', '[A] %s moves eyebrows to %n %m.velocity %m.blocking', 'moveEyebrows', 'bot1',0.5, 'medium', 'no block'],
+			['w', '[A] %s moves eyebrows to %n %m.velocity', 'moveEyebrows', 'bot1',0.5, 'medium'],
 			//['w', 'move eyes of %s to %n in %n seconds %m.blocking', 'moveEyes', 'bot1',0.5, 1, 'no block'],
-			['w', '[A] %s moves eyes to %n %m.velocity %m.blocking', 'moveEyes', 'bot1',0.5, 'medium', 'no block'],
+			['w', '[A] %s moves eyes to %n %m.velocity', 'moveEyes', 'bot1',0.5, 'medium'],
 			/*['w', 'move %s forward %n seconds %m.blocking', 'moveForward', 'bot1', 1, 'no block'],
 			['w', 'move %s forward indefinitely %m.blocking', 'moveForwardI', 'bot1', 'no block'],
 			['w', 'move %s backwards %n seconds %m.blocking', 'moveBackwards', 'bot1', 1, 'no block'],
