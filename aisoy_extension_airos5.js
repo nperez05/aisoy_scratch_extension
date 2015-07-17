@@ -774,7 +774,7 @@ new (function() {
 				position : parseFloat(position),
 				servo: servo,
 				time : timeAux,
-				type : 0,
+				type : 'absolute',
 				async : waitAux
 			});
 			
