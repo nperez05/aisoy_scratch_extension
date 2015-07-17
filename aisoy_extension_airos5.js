@@ -110,8 +110,8 @@ new (function() {
 		//SERVICES
 		this.moveHeadService = new ROSLIB.Service({
 			ros: this.ros,
-			name : '/airos4/servo/move_servo',
-			serviceType : 'airos4_servo/move_servo'
+			name : '/airos5/servo/move',
+			serviceType : 'airos_servo/move_servo'
 		});
 			
 		this.sayService = new ROSLIB.Service({
