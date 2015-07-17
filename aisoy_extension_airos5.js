@@ -769,12 +769,14 @@ new (function() {
 			if(callback==null)
 				waitAux = false;
 
+            var typeAux = "absolute";
+
 			// The request is an object used to send the parameters to the service
 			var request = new ROSLIB.ServiceRequest({
 				position : parseFloat(position),
 				servo: servo,
 				time : timeAux,
-				type : 'absolute'.toString(),
+				type : typeAux,
 				async : waitAux
 			});
 			
