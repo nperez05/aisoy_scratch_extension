@@ -1013,8 +1013,8 @@ new (function() {
 					robot.listeners.update("touch", message.left + "#" + message.head + "#" + message.right);
 					var where = 0
 
-					if(message.back_left) robot.touchedLeft=true;
-					if(message.back_right) robot.touchedRight=true;
+					if(message.back_left) robot.touchedRight=true;
+					if(message.back_right) robot.touchedLeft=true;
 					if(message.head) robot.touchedHead=true;
 				}
 			}).bind(this));
