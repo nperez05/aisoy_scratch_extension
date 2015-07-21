@@ -692,20 +692,20 @@ new (function() {
 	}
 	
 
-	ext.sayTTS = function(bot,text,moving,block,callback){
-		if(block == 'block'){
+	ext.sayTTS = function(bot,text,moving,callback){
+		//if(block == 'block'){
 			if(moving == 'moving')
 				botSay(bot,text.toString(),true,callback);
 			else
 				botSay(bot,text.toString(),false,callback);
-		}
+		/*}
 		else{
 			if(moving == 'moving')
 				botSay(bot,text.toString(),true,null);
 			else
 				botSay(bot,text.toString(),false,null);
 			callback();
-		}
+		}*/
 	}
 	
 	ext.sayList = function(bot,list,moving,block,callback){
@@ -1478,7 +1478,7 @@ new (function() {
 			['w', '[A] %s %m.asrMenu ASR recognition %m.blocking', 'startStopAsr', 'bot1', 'start', 'block'],
 			//['w', 'set %s to %m.states state %m.blocking', 'setEmotion', 'bot1', 'Normal', 'block'],
 			[' ', '[A] %s state is %m.states', 'setEmotion', 'bot1', 'Normal'],
-			['w', '[A] %s says %s %m.mouthMenu mouth %m.blocking', 'sayTTS', 'bot1', 'text to say', 'moving','block'],
+			['w', '[A] %s says %s %m.mouthMenu mouth', 'sayTTS', 'bot1', 'text to say', 'moving'],
 			//['w', '%s say %s without moving mouth %m.blocking', 'sayWithout', 'bot1','text to say', 'block'],
 			//['w', '%s say %s moving mouth %m.blocking', 'sayWith', 'bot1', 'text to say', 'block'],
 			['w', '[A] %s says one of the %s %m.saying moving mouth %m.blocking', 'sayList', 'bot1', 'list','with','block'],
