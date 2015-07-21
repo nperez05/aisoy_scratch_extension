@@ -827,7 +827,7 @@ new (function() {
 		}*/
 	}
 	
-	function moveBot(bot,time,direction,veloc,block,callback){
+	function moveBot(bot,time,direction,veloc,callback){
 		var robot = findBot(bot);
 		var auxVel = 0;
 
@@ -858,8 +858,8 @@ new (function() {
 		}*/
 
 		var waitAux = true;
-		if(block != 'block')
-			waitAux = false;
+		/*if(block != 'block')
+			waitAux = false;*/
 
 		if(robot!=null){
 			if(!moving || (direction==5 && moving)){
@@ -880,60 +880,60 @@ new (function() {
 			}
 		}
 
-		if(block != 'block')
-			callback();
+		/*if(block != 'block')
+			callback();*/
 	}
 	
-	ext.moveForward = function(bot,time,veloc,block,callback){
-		moveBot(bot,time,1,veloc,block,callback);
+	ext.moveForward = function(bot,time,veloc,callback){
+		moveBot(bot,time,1,veloc,callback);
 		//moveBot(bot,time,'forward',veloc,block,callback);
 	}
 	
-	ext.moveForwardI = function(bot,veloc,block,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,1,veloc,block,callback);
+	ext.moveForwardI = function(bot,veloc,activate,callback){
+		if(activate == 'on') moveBot(bot,-2,1,veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'forward',veloc,block,callback);
 		else callback();
 	}
 	
-	ext.moveBackwards = function(bot,time,veloc,block,callback){
-		moveBot(bot,time,2,veloc,block,callback);
+	ext.moveBackwards = function(bot,time,veloc,callback){
+		moveBot(bot,time,2,veloc,callback);
 		//moveBot(bot,time,'backward',veloc,block,callback);
 	}
 	
-	ext.moveBackwardsI = function(bot,veloc,block,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,2,veloc,block,callback);
+	ext.moveBackwardsI = function(bot,veloc,activate,callback){
+		if(activate == 'on') moveBot(bot,-2,2,veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'backward',veloc,block,callback);
 		else callback();
 	}
 	
-	ext.rotateLeft = function(bot,time,veloc,block,callback){
-		moveBot(bot,time,3,veloc,block,callback);
+	ext.rotateLeft = function(bot,time,veloc,callback){
+		moveBot(bot,time,3,veloc,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
         //moveBot(bot,time,'right',veloc,block,callback);
 	}
 	
-	ext.rotateLeftI = function(bot,veloc,block,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,3,veloc,block,callback);
+	ext.rotateLeftI = function(bot,veloc,activate,callback){
+		if(activate == 'on') moveBot(bot,-2,3,veloc,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
 		else callback();
 	}
 	
-	ext.rotateRight  = function(bot,time,veloc,block,callback){
-		moveBot(bot,time,4,veloc,block,callback);
+	ext.rotateRight  = function(bot,time,veloc,callback){
+		moveBot(bot,time,4,veloc,callback);
         //moveBot(bot,time,'left',veloc,block,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
 	}
 	
-	ext.rotateRightI  = function(bot,veloc,block,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,4,veloc,block,callback);
+	ext.rotateRightI  = function(bot,veloc,activate,callback){
+		if(activate == 'on') moveBot(bot,-2,4,veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		else callback();
 	}
 	
-	ext.stopBot = function(bot,block,callback){
-		moveBot(bot,1,5,30,block,callback);
+	ext.stopBot = function(bot,callback){
+		moveBot(bot,1,5,30,callback);
 		//moveBot(bot,1,'stop',30,block,callback);
 	}
 	
@@ -1536,7 +1536,7 @@ new (function() {
 				[' ', '[A] %s plays %m.soundList sound', 'playSound', name , ''],
 				[' ', '[A] %s plays %s of %s', 'playScratchSound', name, 'sound1', 'Sprite1'],
 				[' ', '[A] %s stops all sounds', 'stopAllSound', name , ''],
-				['w', '[A] %s moves forward %n seconds %m.velocity %m.blocking', 'moveForward', name, 1, 'medium','no block'],
+				['w', '[A] %s moves forward %n seconds %m.velocity', 'moveForward', name, 1, 'medium'],
 				['w', '[A] %s moves forward indefinitely %m.velocity %m.blocking %m.activate', 'moveForwardI', name, 'medium','no block', 'off'],
 				['w', '[A] %s moves backwards %n seconds %m.velocity %m.blocking', 'moveBackwards', name, 1, 'medium','no block'],
 				['w', '[A] %s moves backwards indefinitely %m.velocity %m.blocking %m.activate', 'moveBackwardsI', name, 'medium','no block', 'off'],
