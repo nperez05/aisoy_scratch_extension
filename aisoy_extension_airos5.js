@@ -116,8 +116,8 @@ new (function() {
 			
 		this.sayService = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/say',
-			serviceType : 'airos4_tts/say'
+			name : '/airos5/tts/say',
+			serviceType : 'airos_tts/say'
 		});
 					
 		this.setColor = new ROSLIB.Service({
@@ -146,26 +146,26 @@ new (function() {
 		
 		this.getLanguage = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/get_language',
-			serviceType : 'airos4_tts/get_language'
+			name : '/airos5/tts/get_language',
+			serviceType : 'airos_tts/get_language'
 		})
 
 		this.getVoice = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/get_voice',
-			serviceType : 'airos4_tts/get_voice'
+			name : '/airos5/tts/get_voice',
+			serviceType : 'airos_tts/get_voice'
 		})
 
 		this.setLanguageTTS = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/set_language',
-			serviceType : 'airos4_tts/set_language'
+			name : '/airos5/tts/set_language',
+			serviceType : 'airos_tts/set_language'
 		})
 
 		this.setTTS = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/set_tts',
-			serviceType : 'airos4_tts/set_tts'
+			name : '/airos5/tts/set_tts',
+			serviceType : 'airos_tts/set_tts'
 		})
 
 		this.setLanguageASR = new ROSLIB.Service({
@@ -188,8 +188,8 @@ new (function() {
 
 		this.setVoice = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/tts/set_voice',
-			serviceType : 'airos4_tts/set_voice'
+			name : '/airos5/tts/set_voice',
+			serviceType : 'airos_tts/set_voice'
 		})
 
 		this.setGrammar = new ROSLIB.Service({
@@ -347,7 +347,7 @@ new (function() {
 		
 		this.ttsSdk = new ROSLIB.Topic({
 			ros : bot.ros,
-			name : '/airos4/tts/userSdk',
+			name : '/airos5/tts/userSdk',
 			messageType : 'std_msgs/Int16'
 		});
 		
