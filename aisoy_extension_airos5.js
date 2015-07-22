@@ -890,50 +890,50 @@ new (function() {
 	}
 	
 	ext.moveForwardI = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,1,veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'forward',veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'forward',veloc,block,callback);
 		else callback();
 	}
 	
 	ext.moveBackwards = function(bot,time,veloc,callback){
-		moveBot(bot,time,2,veloc,callback);
+		moveBot(bot,time,'backward',veloc,callback);
 		//moveBot(bot,time,'backward',veloc,block,callback);
 	}
 	
 	ext.moveBackwardsI = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,2,veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'backward',veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'backward',veloc,block,callback);
 		else callback();
 	}
 	
 	ext.rotateLeft = function(bot,time,veloc,callback){
-		moveBot(bot,time,3,veloc,callback);
+		moveBot(bot,time,'left',veloc,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
         //moveBot(bot,time,'right',veloc,block,callback);
 	}
 	
 	ext.rotateLeftI = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,3,veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'left',veloc,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
 		else callback();
 	}
 	
 	ext.rotateRight  = function(bot,time,veloc,callback){
-		moveBot(bot,time,4,veloc,callback);
+		moveBot(bot,time,'right',veloc,callback);
         //moveBot(bot,time,'left',veloc,block,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
 	}
 	
 	ext.rotateRightI  = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,4,veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'right',veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		else callback();
 	}
 	
 	ext.stopBot = function(bot,callback){
-		moveBot(bot,1,5,30,callback);
+		moveBot(bot,1,'stop',30,callback);
 		//moveBot(bot,1,'stop',30,block,callback);
 	}
 	
@@ -1537,13 +1537,13 @@ new (function() {
 				[' ', '[A] %s plays %s of %s', 'playScratchSound', name, 'sound1', 'Sprite1'],
 				[' ', '[A] %s stops all sounds', 'stopAllSound', name , ''],
 				['w', '[A] %s moves forward %n seconds %m.velocity', 'moveForward', name, 1, 'medium'],
-				['w', '[A] %s moves forward indefinitely %m.velocity %m.activate', 'moveForwardI', name, 'medium', 'off'],
+				//['w', '[A] %s moves forward indefinitely %m.velocity %m.activate', 'moveForwardI', name, 'medium', 'off'],
 				['w', '[A] %s moves backwards %n seconds %m.velocity', 'moveBackwards', name, 1, 'medium'],
-				['w', '[A] %s moves backwards indefinitely %m.velocity %m.activate', 'moveBackwardsI', name, 'medium','off'],
+				//['w', '[A] %s moves backwards indefinitely %m.velocity %m.activate', 'moveBackwardsI', name, 'medium','off'],
 				['w', '[A] %s rotates left %n seconds %m.velocity', 'rotateLeft', name, 1, 'medium'],
-				['w', '[A] %s rotates left indefinitely %m.velocity %m.activate', 'rotateLeftI', name, 'medium', 'off'],
+				//['w', '[A] %s rotates left indefinitely %m.velocity %m.activate', 'rotateLeftI', name, 'medium', 'off'],
 				['w', '[A] %s rotates right %n seconds %m.velocity', 'rotateRight', name, 1, 'medium'],
-				['w', '[A] %s rotates right indefinitely %m.velocity %m.activate', 'rotateRightI', name, 'medium', 'off'],
+				//['w', '[A] %s rotates right indefinitely %m.velocity %m.activate', 'rotateRightI', name, 'medium', 'off'],
 				['w', '[A] %s stops', 'stopBot', name],
 	        ],
 			menus: {
