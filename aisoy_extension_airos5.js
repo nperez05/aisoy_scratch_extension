@@ -202,8 +202,8 @@ new (function() {
 			ros : this.ros,
 			//name : '/botmobile/move',
 			//serviceType : 'botmobile/MoveBotmobile'
-			name : '/botmovil/Move',
-			serviceType : 'botmovil/MoveService'
+			name : '/device/botmobile/move_time',
+			serviceType : 'botmobiel/MoveTime'
 		})
 		
 		this.setEmotion = new ROSLIB.Service({
@@ -862,7 +862,7 @@ new (function() {
 			waitAux = false;*/
 
 		if(robot!=null){
-			if(!moving || (direction==5 && moving)){
+			if(!moving || (direction=='stop' && moving)){
 				var request = new ROSLIB.ServiceRequest({
 					cmd : direction,
 					time : time,
@@ -872,7 +872,7 @@ new (function() {
 					
 				robot.move.callService(request, function( result ){
 					if(time == -2)	robot.moving = true;
-					if(direction == 5) robot.moving = false;
+					if(direction == 'stop') robot.moving = false;
                     //if(direction == 'stop') robot.moving = false;
 					//if(callback != null)
 					callback();
@@ -885,7 +885,7 @@ new (function() {
 	}
 	
 	ext.moveForward = function(bot,time,veloc,callback){
-		moveBot(bot,time,1,veloc,callback);
+		moveBot(bot,time,'forward',veloc,callback);
 		//moveBot(bot,time,'forward',veloc,block,callback);
 	}
 	
