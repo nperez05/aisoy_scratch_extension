@@ -170,20 +170,20 @@ new (function() {
 
 		this.setLanguageASR = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/asr/set_language',
-			serviceType : 'airos4_asr/set_language'
+			name : '/airos5/asr/set_language',
+			serviceType : 'airos_asr/set_language'
 		})
 
 		this.checkGrammar = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/asr/check_grammar',
-			serviceType : 'airos4_asr/check_grammar'
+			name : '/airos5/asr/check_grammar',
+			serviceType : 'airos_asr/check_grammar'
 		})
 
 		this.onoffASR = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/asr/set_mode',
-			serviceType : 'airos4_asr/set_mode'
+			name : '/airos5/asr/set_mode',
+			serviceType : 'airos_asr/set_mode'
 		})
 
 		this.setVoice = new ROSLIB.Service({
@@ -194,7 +194,7 @@ new (function() {
 
 		this.setGrammar = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/asr/set_grammar',
+			name : '/airos5/asr/set_grammar',
 			serviceType : 'airos_asr/set_grammar'
 		})
 
@@ -317,7 +317,7 @@ new (function() {
 		
 		this.asr = new ROSLIB.Topic({
 			ros : bot.ros,
-			name : '/airos4/asr/recognition',
+			name : '/airos5/asr/recognition',
 			messageType : 'std_msgs/String'
 		});
 
@@ -353,7 +353,7 @@ new (function() {
 		
 		this.asrSdk = new ROSLIB.Topic({
 			ros : bot.ros,
-			name : '/airos4/asr/userSdk',
+			name : '/airos5/asr/userSdk',
 			messageType : 'std_msgs/Int16'
 		});
 		
@@ -839,23 +839,6 @@ new (function() {
 		}
 		else
 			auxVel = 100;
-		
-		/*if(robot!=null){
-			if(!moving || (direction==5 && moving)){
-				var request = new ROSLIB.ServiceRequest({
-					cmd : direction,
-					time : time,
-					vel : auxVel
-				});
-					
-				robot.move.callService(request, function( result ){
-					if(time == -2)	robot.moving = true;
-					if(direction == 5) robot.moving = false;
-					if(callback != null)
-						callback();
-				});
-			}
-		}*/
 
 		var waitAux = true;
 		/*if(block != 'block')
