@@ -907,26 +907,26 @@ new (function() {
 	}
 	
 	ext.rotateLeft = function(bot,time,veloc,callback){
-		moveBot(bot,time,'left',veloc,callback);
+		moveBot(bot,time,'right',veloc,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
         //moveBot(bot,time,'right',veloc,block,callback);
 	}
 	
 	ext.rotateLeftI = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,'left',veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'right',veloc,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
 		else callback();
 	}
 	
 	ext.rotateRight  = function(bot,time,veloc,callback){
-		moveBot(bot,time,'right',veloc,callback);
+		moveBot(bot,time,'left',veloc,callback);
         //moveBot(bot,time,'left',veloc,block,callback);
 		//moveBot(bot,time,'left',veloc,block,callback);
 	}
 	
 	ext.rotateRightI  = function(bot,veloc,activate,callback){
-		if(activate == 'on') moveBot(bot,-2,'right',veloc,callback);
+		if(activate == 'on') moveBot(bot,-2,'left',veloc,callback);
 		//if(activate == 'on') moveBot(bot,-2,'right',veloc,block,callback);
         //if(activate == 'on') moveBot(bot,-2,'left',veloc,block,callback);
 		else callback();
