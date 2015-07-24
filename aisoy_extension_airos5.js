@@ -128,20 +128,20 @@ new (function() {
 					
 		this.mouthPrint = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/mouth/mouth_print',
-			serviceType : 'airos4_mouth/mouth_print'
+			name : '/airos5/display/write',
+			serviceType : 'airos_display/write'
 		});
 					
 		this.mouthDraw = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/mouth/mouth_draw',
-			serviceType : 'airos4_mouth/mouth_draw'
+			name : '/airos5/display/draw_array',
+			serviceType : 'airos_mouth/draw_array'
 		});
 
 		this.mouthDrawImage = new ROSLIB.Service({
 			ros : this.ros,
-			name : '/airos4/mouth/mouth_draw_image_file',
-			serviceType : 'airos4_mouth/mouth_draw_image_file'
+			name : '/airos5/display/draw',
+			serviceType : 'airos_mouth/draw'
 		});
 		
 		this.getLanguage = new ROSLIB.Service({
