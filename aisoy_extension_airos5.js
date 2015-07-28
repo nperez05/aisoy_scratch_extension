@@ -323,19 +323,19 @@ new (function() {
 
         this.faceDetected = new ROSLIB.Topic({
             ros : bot.ros,
-            name : '/airos4/face/detected',
+            name : '/airos5/face/detected',
             messageType : 'std_msgs/Int8'
         });
 
         this.qrDetected = new ROSLIB.Topic({
             ros : bot.ros,
-            name : '/airos4/qr/code',
+            name : '/airos5/qr/code',
             messageType : 'std_msgs/String'
         });
 
         this.eyesCovered = new ROSLIB.Topic({
             ros : bot.ros,
-            name : '/airos4/vision/dark',
+            name : '/airos5/vision/dark',
             messageType : 'std_msgs/Bool'
         });
 
