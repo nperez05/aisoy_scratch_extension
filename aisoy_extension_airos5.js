@@ -793,7 +793,7 @@ new (function() {
 	
 	ext.moveHeadH = function(bot,position,time,callback){
 		//if(block == 'block')
-			moveServo(bot,position,time,'head',callback);
+			moveServo(bot,position,time,'head_h',callback);
 		/*else{
 			moveServo(bot,position,time,'head',null);
 			callback();
@@ -802,7 +802,7 @@ new (function() {
 	
 	ext.moveHeadV = function(bot,position,time,callback){
 		//if(block == 'block')
-			moveServo(bot,position,time,1,callback);
+			moveServo(bot,position,time,'head_v',callback);
 		/*else{
 			moveServo(bot,position,time,1,null);
 			callback();
@@ -1467,6 +1467,7 @@ new (function() {
 			['w', '[A] %s says one of the %s %m.saying moving mouth %m.blocking', 'sayList', 'bot1', 'list','with','block'],
 			//['w', 'move head horizontal of %s to %n in %n seconds %m.blocking', 'moveHeadH', 'bot1',0.5, 1, 'no block'],
 			['w', '[A] %s moves head horizontal to %n %m.velocity', 'moveHeadH', 'bot1',0.5, 'medium'],
+            ['w', '[A] %s moves head vertical to %n %m.velocity', 'moveHeadV', 'bot1',0.5, 'medium'],
 			//['w', 'move head vertical of %s to %n in %n seconds %m.blocking', 'moveHeadV', 'bot1',0.5, 1, 'no block'],
 			//['w', 'move eyebrows of %s to %n in %n seconds %m.blocking', 'moveEyebrows', 'bot1',0.5, 1, 'no block'],
 			['w', '[A] %s moves eyebrows to %n %m.velocity', 'moveEyebrows', 'bot1',0.5, 'medium'],
