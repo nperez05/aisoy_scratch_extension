@@ -203,7 +203,7 @@ new (function() {
 			//name : '/botmobile/move',
 			//serviceType : 'botmobile/MoveBotmobile'
 			name : '/device/botmobile/move_time',
-			serviceType : 'botmobiel/MoveTime'
+			serviceType : 'botmobile/MoveTime'
 		})
 		
 		this.setEmotion = new ROSLIB.Service({
@@ -765,9 +765,9 @@ new (function() {
 
 			position = rangeLimiter(0,1,position);
 
-			var waitAux = true;
+			var waitAux = false;
 			if(callback==null)
-				waitAux = false;
+				waitAux = true;
 
             var typeAux = "absolute";
 
