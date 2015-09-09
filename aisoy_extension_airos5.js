@@ -1324,7 +1324,7 @@ new (function() {
 		}
 	}
 
-	ext.mouthDrawImage = function(bot,costume,sprite,block,callback){
+	ext.mouthDrawImage = function(bot,costume,sprite,callback){
 		var robot=findBot(bot);
 
 		if (window.XMLHttpRequest && robot!=null)
@@ -1480,7 +1480,7 @@ new (function() {
 			['w', 'stop %s %m.blocking', 'stopBot', 'bot1', 'no block'],*/
 			['w', '[A] %s heart light to: red %n green %n blue %n in %n secs', 'hearth', 'bot1', 255, 255, 255, 1],
 			//['w', '[A] %s draw in mouth picture %s %m.blocking', 'mouthDraw','bot1','                                          x            xx            x x          x   x        x     xxxxxxxx                               ','no block'],
-			['w', '[A] %s draws %s of %s in mouth %m.blocking', 'mouthDrawImage', 'bot1','costume1','Sprite1','no block'],
+			['w', '[A] %s draws %s of %s in mouth', 'mouthDrawImage', 'bot1','costume1','Sprite1'],
 			['w', '[A] %s writes %s in mouth', 'mouthWrite','bot1','text to write'],
 			['h', '[E] when %s is touched at %m.sides', 'botTouched', 'bot1', 'head'],
 			['h', '[E] when %s is in position %m.positions', 'botMoved', 'bot1', 'standup'],
