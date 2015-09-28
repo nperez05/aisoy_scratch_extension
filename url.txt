@@ -8,6 +8,8 @@ http://scratchx.org/?url=http://nperez05.github.io/aisoy_scratch_extension/aisoy
 
 http://scratchx.org/?url=http://nperez05.github.io/aisoy_scratch_extension/aisoy_extension_v4_Advance.js#scratch
 
+http://scratchx.org/?url=http://nperez05.github.io/aisoy_scratch_extension/aisoy_extension_v4_Advance_unsecure.js#scratch
+
 
 AIROS5
 http://scratchx.org/?url=http://nperez05.github.io/aisoy_scratch_extension/aisoy_extension_airos5.js#scratch
