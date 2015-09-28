@@ -83,7 +83,7 @@ new (function() {
 
 		// Connecting to ROS
 		this.ros = new ROSLIB.Ros({
-			url : 'wss://' + ip + ':9090'
+			url : 'ws://' + ip + ':9090'
 		});
 
 		// Event callbacks
